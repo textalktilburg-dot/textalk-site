@@ -1,10 +1,10 @@
 ---
-title: Textalk - De Afvalberg
-datum: Maart 2022
+title: Textalk - Fast Fashion Paradox
+datum: Mei 2022
 locatie: Studiozaal - Schouwburg Concertzaal Tilburg
-kleur: "#C7B299"
+kleur: "#FDED79"
 thema: placeholder
 ondertitel: placeholder
 omschrijving: placeholder
-cover: /media/uploads/textalk11-copy.png
+cover: /media/uploads/textalk-mei-22-2.jpg
 ---
