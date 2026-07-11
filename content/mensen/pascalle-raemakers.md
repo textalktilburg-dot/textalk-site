@@ -1,6 +1,6 @@
 ---
 naam: Pascalle Raemakers
-rol: Maker & marketing
+rol: Redactie & Presentatie
 type: Team
-kleur: "#18C674"
+kleur: "#39AEFF"
 ---
