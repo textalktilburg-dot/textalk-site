@@ -1,10 +1,10 @@
 ---
-title: Textalk - Fast Fashion Paradox
-datum: Mei 2022
+title: Textalk - Antidotes for Overconsumption
+datum: November 2022
 locatie: Studiozaal - Schouwburg Concertzaal Tilburg
-kleur: "#FDED79"
+kleur: "#18C674"
 thema: placeholder
 ondertitel: placeholder
 omschrijving: placeholder
-cover: /media/uploads/textalk-mei-22-2.jpg
+cover: /media/uploads/tex-talk-14.jpg
 ---
