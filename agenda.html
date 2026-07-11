@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agenda — Textalk</title>
+<meta name="description" content="Wanneer en waar je Textalk live kunt meemaken: shows, meetups en community-momenten in Tilburg.">
+<meta property="og:site_name" content="Textalk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agenda — Textalk">
+<meta property="og:description" content="Wanneer en waar je Textalk live kunt meemaken: shows, meetups en community-momenten.">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="/media/og.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--lila:#E5ABFF;--blauw:#39AEFF;--koraal:#FF928F;--groen:#18C674;--geel:#FDED79;--grey-text:#595959;
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-size:clamp(2.5rem,7vw,5.5rem);line-height:.92;letter-spacing:-.02em;font-weight:700}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:all .15s;cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .arr{display:inline-block}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.85rem;line-height:1}
+  .hairline{border-top:1px solid var(--ink)}
+  .card{position:relative;overflow:hidden;display:block;text-decoration:none;color:inherit}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 20px;z-index:100}
+  .skip:focus{left:0}
+  .shopframe{width:100%;min-height:640px;border:1px solid var(--ink);background:#fff}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="flex items-center gap-4 md:gap-6 overflow-x-auto" aria-label="Hoofdnavigatie">
+      <a class="font-medium hover:opacity-60" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="font-medium hover:opacity-60" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="font-medium hover:opacity-60" href="textalk-expert-profiel.html">Experts</a>
+      <a class="font-medium hover:opacity-60" href="nieuws.html">Nieuws</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/over">Over ons</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/partners">Partners</a>
+      <a class="btn btn-primary" href="agenda.html" style="border-bottom:none">Kom langs</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- LIJST -->
+  <div id="lijst">
+    <section class="mx-auto px-5 py-14 md:px-10 md:py-20" style="max-width:1280px">
+      <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Kom langs</p>
+      <h1 class="display mt-2">Agenda</h1>
+      <p class="mt-6 max-w-2xl text-lg">Wanneer en waar je ons live kunt meemaken: shows, meetups en community-momenten. Offline is waar het gebeurt.</p>
+    </section>
+    <section class="hairline bg-white">
+      <div class="mx-auto px-5 py-12 md:px-10" style="max-width:1280px">
+        <h2 class="h2 mb-6">Binnenkort</h2>
+        <div id="upcoming" class="grid gap-4 md:grid-cols-2"><p class="meta" style="color:var(--grey-text)">Agenda laden…</p></div>
+      </div>
+    </section>
+    <section class="hairline bg-white">
+      <div class="mx-auto px-5 py-12 md:px-10" style="max-width:1280px">
+        <h2 class="h2 mb-6">Geweest</h2>
+        <div id="past" class="grid gap-4 md:grid-cols-3"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- DETAIL -->
+  <div id="detail" class="hidden"></div>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="font-semibold">deep dive into fashion</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(async function(){
+  const esc=TextalkCMS.esc, safe=TextalkCMS.safeUrl;
+  const TYPEKLEUR={"Live show":"var(--lila)","Meetup":"var(--groen)","Pop-up":"var(--geel)","Community":"var(--koraal)"};
+  // Alleen deze ticketing-domeinen mogen worden ingebed (veiligheid):
+  const SHOP_HOSTS=["shop.weeztix.com","weeztix.shop","shop.eventix.io","eventix.shop","widget.weezevent.com","www.weezevent.com","weezevent.com"];
+  function shopUrl(u){
+    u=safe(u); if(!u) return "";
+    try{ const h=new URL(u).hostname.toLowerCase();
+      return SHOP_HOSTS.some(d=>h===d||h.endsWith("."+d))?u:""; }catch(e){ return ""; }
+  }
+  function fmt(d){const x=new Date(d);return isNaN(x)?esc(d||""):x.toLocaleDateString("nl-NL",{weekday:"long",day:"numeric",month:"long",year:"numeric"});}
+
+  const slug=new URLSearchParams(location.search).get("slug");
+  let items=[];
+  try{ items=await TextalkCMS.list("agenda"); }catch(e){}
+
+  if(slug){
+    document.getElementById("lijst").classList.add("hidden");
+    const el=document.getElementById("detail"); el.classList.remove("hidden");
+    let a=null;
+    try{ a=await TextalkCMS.get("agenda",slug); }catch(e){}
+    if(!a){ el.innerHTML='<div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><h1 class="h2">Event niet gevonden</h1><a class="btn btn-primary mt-8" href="agenda.html">Naar de agenda →</a></div>'; return; }
+    document.title=(a.title||"Event")+" — Textalk";
+    const kleur=TYPEKLEUR[a.type]||"var(--lila)";
+    const shop=shopUrl(a.ticketshop);
+    const ext=safe(a.link);
+    el.innerHTML=`
+    <section style="background:${kleur}">
+      <div class="mx-auto px-5 py-14 md:px-10 md:py-20" style="max-width:1280px">
+        <a href="agenda.html" class="meta font-semibold">← Hele agenda</a>
+        <p class="mt-8"><span class="tag">${esc(a.type||"Event")}</span></p>
+        <h1 class="display mt-4" style="font-size:clamp(2.2rem,6vw,4.5rem)">${esc(a.title||"")}</h1>
+        <p class="mt-4 text-lg font-semibold">${fmt(a.datum)}${a.locatie?" · "+esc(a.locatie):""}</p>
+      </div>
+    </section>
+    ${a.omschrijving?`<section class="hairline bg-white"><div class="mx-auto px-5 py-12 md:px-10" style="max-width:800px"><p class="text-lg">${esc(a.omschrijving)}</p></div></section>`:""}
+    <section class="hairline bg-white">
+      <div class="mx-auto px-5 py-12 md:px-10" style="max-width:800px">
+        <h2 class="h2 mb-6">Tickets</h2>
+        ${shop
+          ? `<iframe class="shopframe" src="${shop}" title="Ticketshop" loading="lazy" allow="payment"></iframe>
+             <p class="meta mt-3" style="color:var(--grey-text)">Kopen lukt niet in dit venster? <a class="underline" style="text-underline-offset:3px" rel="noopener" href="${shop}">Open de ticketshop in een nieuw tabblad →</a></p>`
+          : ext
+          ? `<p class="text-lg">Tickets en aanmelden lopen via een externe pagina.</p><a class="btn btn-primary mt-6" rel="noopener" href="${ext}">Naar tickets <span class="arr">→</span></a>`
+          : `<p class="text-lg">Aanmelden is (nog) niet nodig of nog niet open. Wil je een seintje zodra het kan?</p><a class="btn btn-primary mt-6" href="index.html">Meld je aan voor de nieuwsbrief <span class="arr">→</span></a>`}
+      </div>
+    </section>`;
+    return;
+  }
+
+  // LIJST
+  const now=new Date(); now.setHours(0,0,0,0);
+  const parsed=items.map(i=>({i,d:new Date(i.datum)})).filter(x=>!isNaN(x.d));
+  const up=parsed.filter(x=>x.d>=now).sort((a,b)=>a.d-b.d);
+  const past=parsed.filter(x=>x.d<now).sort((a,b)=>b.d-a.d);
+  function tile(x,big){
+    const a=x.i, kleur=TYPEKLEUR[a.type]||"var(--lila)";
+    return `<a class="card p-6 flex flex-col justify-between gap-6" style="background:${big?kleur:"transparent"};border:1px solid var(--ink)" href="agenda.html?slug=${encodeURIComponent(a._slug)}">
+      <div><span class="tag" style="border-width:1px;${big?"":"opacity:.7"}">${esc(a.type||"Event")}</span>
+      <p class="h3 mt-4">${esc(a.title)}</p>
+      <p class="meta mt-1 font-semibold">${fmt(a.datum)}${a.locatie?" · "+esc(a.locatie):""}</p></div>
+      <p class="meta font-semibold">${big?"Meer info & tickets →":"Terugblik →"}</p></a>`;
+  }
+  document.getElementById("upcoming").innerHTML = up.length
+    ? up.map(x=>tile(x,true)).join("")
+    : '<div class="p-8" style="border:1px solid var(--ink)"><p class="h3">Geen show gepland — we zitten niet stil</p><p class="mt-2" style="color:var(--grey-text)">We werken aan het onderzoek. Volg de nieuwsbrief voor het volgende event.</p><a class="btn btn-primary mt-6" href="index.html">Blijf op de hoogte <span class="arr">→</span></a></div>';
+  document.getElementById("past").innerHTML = past.length ? past.map(x=>tile(x,false)).join("") : '<p class="meta" style="color:var(--grey-text)">Nog geen eerdere events in de agenda.</p>';
+})();
+</script>
+</body>
+</html>

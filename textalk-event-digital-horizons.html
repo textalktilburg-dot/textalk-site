@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<title>Digital Horizons — Textalk</title>
+<meta name="description" content="Mode tussen techno-optimisme en techno-pessimisme. De Textalk deep dive over digitale mode.">
+<meta property="og:site_name" content="Textalk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Digital Horizons — Textalk">
+<meta property="og:description" content="Mode tussen techno-optimisme en techno-pessimisme. Kijk terug, met sprekers, takeaways en bronnen.">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="/media/og.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--lila:#E5ABFF;--blauw:#39AEFF;--koraal:#FF928F;--groen:#18C674;--geel:#FDED79;--grey-text:#595959;
+    --accent:#E5ABFF; /* Digital Horizons = lila */
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-weight:700;letter-spacing:-.02em;line-height:.92}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif{font-family:var(--font-serif)}.serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:all .15s;cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .arr{display:inline-block;transition:transform .15s}.btn-primary:hover .arr{transform:translateX(4px)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.85rem;line-height:1}
+  .hairline{border-top:1px solid var(--ink)}
+  .ph-people{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, rgba(0,0,0,.14) 0 22%, transparent 23%),linear-gradient(0deg,rgba(0,0,0,.08),rgba(0,0,0,.08))}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s}.reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn,.arr,.acc-body{transition:none!important}}
+  .play-badge{width:70px;height:70px;border-radius:999px;border:2px solid #fff;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3);transition:transform .2s}.play-badge:hover{transform:scale(1.06)}
+
+  /* poster header row */
+  .poster-row{display:flex;justify-content:space-between;gap:1rem;font-weight:600;font-size:.9rem}
+
+  /* accordion */
+  .acc{border-bottom:1px solid var(--ink)}.acc:first-child{border-top:1px solid var(--ink)}
+  .acc-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0;text-align:left;background:none;cursor:pointer;font-weight:700;font-size:clamp(1.02rem,2vw,1.25rem)}
+  .acc-num{font-family:var(--font-serif);font-style:italic;font-size:1.35rem;margin-right:.9rem;color:var(--grey-text)}
+  .acc-icon{flex-shrink:0;width:28px;height:28px;border-radius:999px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+  .acc.open .acc-icon{transform:rotate(45deg);background:var(--accent)}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height .3s ease-out}
+  .acc-body-inner{padding:0 0 1.4rem 2.5rem}
+
+  .credit{display:flex;flex-direction:column;gap:.15rem}
+  .credit .role{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--grey-text)}
+
+  .demo-badge{position:fixed;bottom:16px;left:16px;z-index:60;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;opacity:.85}
+  .heroscrib{position:absolute;inset:0;width:100%;height:100%}
+</style>
+</head>
+<body>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="flex items-center gap-4 md:gap-6 overflow-x-auto">
+      <a class="font-medium hover:opacity-60" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="font-medium" style="border-bottom:2px solid var(--ink);padding-bottom:2px" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="font-medium hover:opacity-60" href="textalk-expert-profiel.html">Experts</a>
+      <a class="font-medium hover:opacity-60" href="nieuws.html">Nieuws</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/over">Over ons</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/partners">Partners</a>
+      <a class="btn btn-primary" href="agenda.html">Kom langs</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO: poster-stijl. lila + witte scribble-web + vaste kopregel + vraag-als-statement -->
+<section class="relative overflow-hidden" style="background:var(--accent)">
+  <svg class="heroscrib" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true" id="heroScrib"></svg>
+  <div class="relative mx-auto px-5 pt-6 pb-14 md:px-10 md:pb-20" style="max-width:1280px">
+    <!-- vaste posterkopregel -->
+    <div class="poster-row">
+      <span>Digital Horizons</span>
+      <span class="hidden sm:block">Deep dive into fashion</span>
+      <span>04.07.2024</span>
+    </div>
+    <a href="textalk-talkshows-overzicht.html" class="meta font-semibold inline-block mt-8">← Alle shows</a>
+    <!-- vraag als statement, zoals de poster -->
+    <h1 class="display mt-6" style="font-size:clamp(2.6rem,7.5vw,6rem)">What else can<br>we see in<br>digital fashion?</h1>
+    <div class="mt-10 flex flex-wrap items-center gap-3">
+      <span class="tag">Digitale mode</span><span class="tag">Techno-optimisme vs -pessimisme</span>
+      <span class="tag" style="background:rgba(255,255,255,.6)">New Order of Fashion</span>
+    </div>
+  </div>
+</section>
+
+<!-- IN HET KORT: compacte samenvattingsstrip (overzichtelijk, geen tekstmuur) -->
+<section class="hairline bg-white">
+  <div class="mx-auto grid gap-px px-0 md:grid-cols-4" style="max-width:1280px;background:var(--ink);border-left:1px solid var(--ink);border-right:1px solid var(--ink)">
+    <div class="bg-white p-6"><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Datum</p><p class="h3 mt-1">4 juli 2024</p></div>
+    <div class="bg-white p-6"><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Locatie</p><p class="h3 mt-1">New Order of Fashion</p></div>
+    <div class="bg-white p-6"><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Thema</p><p class="h3 mt-1">Digitale mode</p></div>
+    <div class="bg-white p-6"><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Terugkijken</p><p class="h3 mt-1"><a href="#kijk" class="underline" style="text-underline-offset:3px">Naar de video ↓</a></p></div>
+  </div>
+</section>
+
+<!-- WAAR GING HET OVER -->
+<section class="hairline bg-white">
+  <div class="mx-auto grid gap-10 px-5 py-16 md:grid-cols-12 md:px-10 md:py-20 reveal" style="max-width:1280px">
+    <div class="md:col-span-4"><h2 class="h2">Waar ging het over</h2></div>
+    <div class="md:col-span-8 space-y-5 text-lg">
+      <p>Digitale mode belooft van alles: kleding die je alleen online draagt, catwalks in games, kledingkasten zonder afval. Maar is het de oplossing waar de industrie op wacht, of gewoon een nieuwe manier om ons meer te laten consumeren?</p>
+      <p>In Digital Horizons zetten we techno-optimisme en techno-pessimisme tegenover elkaar. We keken naar wat digitale mode nú al kan, wie ervan profiteert, en wat er verandert als je kleren pixels worden.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ZO VERLIEP DE AVOND -->
+<section class="hairline bg-white">
+  <div class="mx-auto px-5 pt-14 pb-4 md:px-10 reveal" style="max-width:1280px">
+    <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Zo verliep de avond</p>
+    <div class="mt-4 grid gap-3 sm:grid-cols-4">
+      <div class="p-4" style="border:1px solid var(--ink)"><span class="serif-quote">01</span><p class="font-semibold mt-1">Introductie</p><p class="meta" style="color:var(--grey-text)">Het thema neergezet</p></div>
+      <div class="p-4" style="border:1px solid var(--ink)"><span class="serif-quote">02</span><p class="font-semibold mt-1">Interview</p><p class="meta" style="color:var(--grey-text)">Met de hoofdgast</p></div>
+      <div class="p-4" style="border:1px solid var(--ink)"><span class="serif-quote">03</span><p class="font-semibold mt-1">Paneldiscussie</p><p class="meta" style="color:var(--grey-text)">Optimist vs pessimist</p></div>
+      <div class="p-4" style="border:1px solid var(--ink)"><span class="serif-quote">04</span><p class="font-semibold mt-1">Publieksvragen</p><p class="meta" style="color:var(--grey-text)">De zaal praat mee</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TERUGKIJKEN -->
+<section id="kijk" class="hairline bg-white">
+  <div class="mx-auto px-5 py-16 md:px-10 reveal" style="max-width:1280px">
+    <h2 class="h2 mb-6">Kijk de show terug</h2>
+    <div class="relative aspect-video flex items-center justify-center overflow-hidden" style="background:var(--accent);border:1px solid var(--ink)">
+      <svg class="heroscrib" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" aria-hidden="true" id="vidScrib"></svg>
+      <button class="play-badge relative" aria-label="Registratie afspelen"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></button>
+    </div>
+    <p class="meta mt-3" style="color:var(--grey-text)">Registratie & foto's © [fotograaf]</p>
+  </div>
+</section>
+
+<!-- TAKEAWAYS -->
+<section class="hairline bg-white">
+  <div class="mx-auto px-5 py-16 md:px-10 reveal" style="max-width:900px">
+    <h2 class="h2">De takeaways</h2>
+    <p class="mt-3 mb-8" style="color:var(--grey-text)">De kern van de avond in vier inzichten. Klik open wat je wilt weten.</p>
+    <div id="acc">
+      <div class="acc open">
+        <button class="acc-head"><span><span class="acc-num">01</span>Digitaal is geen synoniem voor duurzaam</button><span class="acc-icon">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner"><p>Een digitaal kledingstuk bespaart stof, maar draait op servers en devices die óók energie kosten. "Digitaal" lost het probleem niet vanzelf op — het verplaatst het. [Onderbouwing in de bronnen.]</p></div></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head"><span><span class="acc-num">02</span>De optimist en de pessimist hebben allebei een punt</button><span class="acc-icon">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner"><p>Techno-optimisten zien minder verspilling en nieuwe expressievormen; pessimisten zien nog een consumptiemachine. De waarheid ligt in wie de technologie in handen heeft en waarvoor.</p></div></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head"><span><span class="acc-num">03</span>Digitale mode verandert wat 'bezit' betekent</button><span class="acc-icon">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner"><p>Als je een outfit alleen voor een foto of in een game draagt, wat koop je dan eigenlijk? Digitale mode stelt de vraag of we kleding bezitten of vooral beelden van onszelf.</p></div></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head"><span><span class="acc-num">04</span>Wat je zelf kunt doen</button><span class="acc-icon">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner"><p>Wees kritisch op beloftes van "duurzaam want digitaal", en vraag door naar de echte voetafdruk. Nieuwsgierig? Verken digitale mode zonder er meteen in te geloven of het af te schrijven.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPREKERS -->
+<section class="hairline bg-white">
+  <div class="mx-auto px-5 py-16 md:px-10 reveal" style="max-width:1280px">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+      <div><p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Wie er aan tafel zat</p><h2 class="h2 mt-1">Sprekers & experts</h2></div>
+      <a class="font-semibold" href="textalk-expert-profiel.html">Alle experts <span class="arr">→</span></a>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" id="speakers"></div>
+  </div>
+</section>
+
+<!-- MADE BY: team-credits per rol -->
+<section class="hairline" style="background:var(--accent)">
+  <div class="mx-auto px-5 py-16 md:px-10 md:py-20 reveal" style="max-width:1280px">
+    <p class="meta font-semibold uppercase tracking-wide">Gemaakt door</p>
+    <h2 class="h2 mt-1">Het team achter Digital Horizons</h2>
+    <p class="mt-3 max-w-2xl">Een show maak je met veel handen. Dit zijn de mensen — makers, studenten en vrijwilligers — die deze avond mogelijk maakten.</p>
+    <div class="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3" id="credits"></div>
+    <p class="meta mt-10" style="color:rgba(0,0,0,.6)">Studenten van Fontys en Yuverta draaiden mee in redactie, productie en presentatie.</p>
+  </div>
+</section>
+
+<!-- BRONNEN -->
+<section class="hairline" style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-16 md:px-10 md:py-20 reveal" style="max-width:1280px">
+    <h2 class="h2">Bronnen bij deze show</h2>
+    <p class="mt-3 max-w-2xl text-white/80">Alles wat op het podium beweerd is, kun je nalezen. Zo werken wij: geen claim zonder bron.</p>
+    <ul class="mt-8 space-y-3 max-w-3xl">
+      <li class="pl-4" style="border-left:3px solid var(--accent)"><a class="hover:underline" style="text-underline-offset:3px" href="#">[Bron 1 — onderzoek naar digitale mode & footprint]</a></li>
+      <li class="pl-4" style="border-left:3px solid var(--accent)"><a class="hover:underline" style="text-underline-offset:3px" href="#">[Bron 2 — rapport over virtuele kleding]</a></li>
+      <li class="pl-4" style="border-left:3px solid var(--accent)"><a class="hover:underline" style="text-underline-offset:3px" href="#">[Bron 3 — data over energiegebruik van platforms]</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- VOLGENDE/VORIGE -->
+<section class="hairline bg-white">
+  <div class="mx-auto grid grid-cols-2 px-0" style="max-width:1280px">
+    <a href="textalk-show-detail.html" class="p-8 md:p-10 hover:bg-black hover:text-white transition-colors" style="border-right:1px solid var(--ink)">
+      <p class="meta font-semibold">← Vorige show</p><p class="h3 mt-2">Threads of the Past</p>
+    </a>
+    <a href="textalk-show-detail.html" class="p-8 md:p-10 text-right hover:bg-black hover:text-white transition-colors">
+      <p class="meta font-semibold">Volgende show →</p><p class="h3 mt-2">The Chemical Equation</p>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="font-semibold">deep dive into fashion</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-badge">Event: Digital Horizons · placeholder</div>
+
+<script>
+const SPK=[
+  {n:'[Hoofdgast]',r:'Digital fashion designer',c:'var(--blauw)'},
+  {n:'[Panellid]',r:'Techno-optimist',c:'var(--groen)'},
+  {n:'[Panellid]',r:'Techno-pessimist',c:'var(--koraal)'},
+  {n:'[Onderzoeker]',r:'Mode & technologie',c:'var(--geel)'},
+];
+document.getElementById('speakers').innerHTML=SPK.map(s=>`
+  <a class="block" href="textalk-expert-profiel.html" aria-label="${s.n}">
+    <div class="relative aspect-[4/5] overflow-hidden" style="background:${s.c};border:1px solid var(--ink)"><div class="ph-people"></div></div>
+    <p class="font-semibold mt-3 leading-tight">${s.n}</p><p class="meta" style="color:var(--grey-text)">${s.r} · bekijk profiel →</p>
+  </a>`).join('');
+
+const CREDITS=[
+  {role:'Presentatie',n:'Haiko Huvenaars'},
+  {role:'Productie',n:'Linde [achternaam]'},
+  {role:'Marketing & communicatie',n:'Pascalle Raemakers'},
+  {role:'Decor',n:'Friso [achternaam]'},
+  {role:'Redactie',n:'[Naam]'},
+  {role:'Techniek & registratie',n:'[Naam] · © [fotograaf]'},
+];
+document.getElementById('credits').innerHTML=CREDITS.map(c=>`
+  <div class="credit"><span class="role">${c.role}</span><span class="h3">${c.n}</span></div>`).join('');
+
+// accordion
+document.querySelectorAll('.acc-head').forEach(h=>h.addEventListener('click',()=>{
+  const acc=h.parentElement,body=h.nextElementSibling,open=acc.classList.contains('open');
+  if(open){acc.classList.remove('open');body.style.maxHeight=null;}
+  else{acc.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';}
+}));
+const f=document.querySelector('.acc.open .acc-body');if(f)f.style.maxHeight=f.scrollHeight+'px';
+
+// scribble web zoals de poster: veel dunne lijnen tussen willekeurige punten binnen een verticale vorm
+function web(svg,W,H,color){
+  const ns='http://www.w3.org/2000/svg';
+  const N=46,pts=[];
+  for(let i=0;i<N;i++){
+    const x=W*(0.12+Math.random()*0.62)+Math.sin(i)*20;
+    const y=H*(Math.random());
+    pts.push([x,y]);
+  }
+  const g=document.createElementNS(ns,'g');
+  g.setAttribute('stroke',color);g.setAttribute('stroke-width','.6');g.setAttribute('fill','none');g.setAttribute('opacity','.9');
+  for(let i=0;i<N;i++){
+    // verbind elk punt met een paar dichtstbijzijnde -> web-effect
+    const near=pts.map((p,j)=>[j,Math.hypot(p[0]-pts[i][0],p[1]-pts[i][1])]).sort((a,b)=>a[1]-b[1]).slice(1,5);
+    near.forEach(([j])=>{
+      const l=document.createElementNS(ns,'line');
+      l.setAttribute('x1',pts[i][0].toFixed(0));l.setAttribute('y1',pts[i][1].toFixed(0));
+      l.setAttribute('x2',pts[j][0].toFixed(0));l.setAttribute('y2',pts[j][1].toFixed(0));
+      g.appendChild(l);
+    });
+  }
+  svg.appendChild(g);
+}
+web(document.getElementById('heroScrib'),1280,720,'#ffffff');
+web(document.getElementById('vidScrib'),1200,675,'#ffffff');
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nieuws — Textalk</title>
+<meta name="description" content="Wat er speelt in de kledingindustrie: aankondigingen, terugblikken en updates uit het onderzoek van Textalk.">
+<meta property="og:site_name" content="Textalk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nieuws — Textalk">
+<meta property="og:description" content="Wat er speelt in de kledingindustrie: aankondigingen, terugblikken en updates uit het onderzoek.">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="/media/og.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--geel:#FDED79;--grey-text:#595959;
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-size:clamp(2.5rem,7vw,5.5rem);line-height:.92;letter-spacing:-.02em;font-weight:700}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:all .15s;cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .arr{display:inline-block}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.875rem;line-height:1}
+  .hairline{border-top:1px solid var(--ink)}
+  .card{position:relative;overflow:hidden;display:block;text-decoration:none;color:inherit}
+  .filter{border-radius:999px;border:1.5px solid var(--ink);padding:8px 18px;font-weight:500;font-size:.9rem;cursor:pointer;background:transparent;transition:all .12s;white-space:nowrap}
+  .filter.active{background:var(--ink);color:var(--paper)}
+  .artikel p{margin:0 0 1.1rem}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 20px;border-radius:0 0 12px 0;z-index:100}
+  .skip:focus{left:0}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="flex items-center gap-4 md:gap-6 overflow-x-auto" aria-label="Hoofdnavigatie">
+      <a class="font-medium hover:opacity-60" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="font-medium hover:opacity-60" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="font-medium hover:opacity-60" href="textalk-expert-profiel.html">Experts</a>
+      <a class="font-medium" style="border-bottom:2px solid var(--ink);padding-bottom:2px" href="nieuws.html">Nieuws</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/over">Over ons</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/partners">Partners</a>
+      <a class="btn btn-primary" href="agenda.html">Kom langs</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- LIJSTWEERGAVE -->
+  <div id="lijst">
+    <section class="mx-auto px-5 py-14 md:px-10 md:py-20" style="max-width:1280px">
+      <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Journalistiek platform</p>
+      <h1 class="display mt-2">Laatste draadjes</h1>
+      <p class="mt-6 max-w-2xl text-lg">Aankondigingen, terugblikken en updates uit het onderzoek — geschreven door de redactie, en straks ook door meeschrijvende vrijwilligers.</p>
+      <div class="mt-8 flex gap-2 overflow-x-auto" id="filters"></div>
+    </section>
+    <section class="hairline bg-white">
+      <div class="mx-auto px-5 py-12 md:px-10" style="max-width:1280px">
+        <div id="grid" class="grid gap-4 md:grid-cols-3">
+          <p class="meta" style="color:var(--grey-text)">Artikelen laden…</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ARTIKELWEERGAVE -->
+  <div id="artikelView" class="hidden">
+    <article class="mx-auto px-5 py-14 md:px-10 md:py-20" style="max-width:800px">
+      <a href="nieuws.html" class="meta font-semibold">← Al het nieuws</a>
+      <p class="mt-8"><span class="tag" id="aTag"></span></p>
+      <h1 class="display mt-4" style="font-size:clamp(2rem,5vw,3.6rem)" id="aTitle"></h1>
+      <p class="meta mt-4 font-semibold" style="color:var(--grey-text)" id="aMeta"></p>
+      <p class="mt-8 text-xl font-semibold" id="aIntro"></p>
+      <div class="artikel mt-6 text-lg" id="aBody"></div>
+      <p class="meta mt-12 pt-6" style="border-top:1px solid var(--ink);color:var(--grey-text)">Vragen over dit artikel of een tip voor de redactie? Mail <a class="underline" style="text-underline-offset:3px" href="mailto:hallo@textalk.nl">hallo@textalk.nl</a> — we lezen alles.</p>
+    </article>
+  </div>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="font-semibold">deep dive into fashion</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(async function(){
+  const esc=TextalkCMS.esc, md=TextalkCMS.mdToHtml;
+  const slug=new URLSearchParams(location.search).get('slug');
+  function fmtDate(d){const x=new Date(d);return isNaN(x)?esc(d||''):x.toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});}
+
+  if(slug){
+    // ARTIKEL
+    document.getElementById('lijst').classList.add('hidden');
+    document.getElementById('artikelView').classList.remove('hidden');
+    try{
+      const a=await TextalkCMS.get('nieuws',slug);
+      document.title=(a.title||'Artikel')+' — Textalk';
+      document.getElementById('aTag').textContent=a.tag||'Nieuws';
+      document.getElementById('aTitle').textContent=a.title||'';
+      document.getElementById('aMeta').textContent=fmtDate(a.datum)+(a.auteur?' · '+a.auteur:'');
+      document.getElementById('aIntro').textContent=a.intro||'';
+      document.getElementById('aBody').innerHTML=md(a.body||'');
+    }catch(e){
+      document.getElementById('artikelView').innerHTML='<div class="mx-auto px-5 py-24 text-center" style="max-width:760px"><h1 class="h2">Artikel niet gevonden</h1><a class="btn btn-primary mt-8" href="nieuws.html">Al het nieuws →</a></div>';
+    }
+    return;
+  }
+
+  // LIJST + FILTERS
+  try{
+    let items=await TextalkCMS.list('nieuws');
+    items.sort((a,b)=>new Date(b.datum)-new Date(a.datum));
+    const tags=[...new Set(items.map(i=>i.tag).filter(Boolean))];
+    const fEl=document.getElementById('filters');
+    fEl.innerHTML='<button class="filter active" data-f="alles">Alles</button>'+tags.map(t=>'<button class="filter" data-f="'+esc(t)+'">'+esc(t)+'</button>').join('');
+    const grid=document.getElementById('grid');
+    function render(f){
+      const sel=items.filter(i=>f==='alles'||i.tag===f);
+      grid.innerHTML=sel.length?sel.map(TextalkCMS.newsTile).join(''):'<p class="meta" style="color:var(--grey-text)">Nog geen artikelen in deze categorie.</p>';
+    }
+    fEl.addEventListener('click',e=>{
+      const b=e.target.closest('.filter');if(!b)return;
+      fEl.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');render(b.dataset.f);
+    });
+    render('alles');
+  }catch(e){
+    document.getElementById('grid').innerHTML='<p class="meta" style="color:var(--grey-text)">Artikelen konden niet geladen worden. Probeer het later opnieuw.</p>';
+  }
+})();
+</script>
+</body>
+</html>

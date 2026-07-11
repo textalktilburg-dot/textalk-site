@@ -1,0 +1,158 @@
+# Textalk CMS-configuratie (Decap CMS)
+# Dit bestand bepaalt welke velden je in het beheerscherm ziet.
+# 'backend' regelt de login via Netlify Identity + Git Gateway.
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Waar geüploade afbeeldingen terechtkomen
+media_folder: "media/uploads"
+public_folder: "/media/uploads"
+
+# Taal van de interface
+locale: "nl"
+
+collections:
+  # ---------- SHOWS / TALKSHOWS ----------
+  - name: "shows"
+    label: "Talkshows"
+    label_singular: "Talkshow"
+    folder: "content/shows"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{datum}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "datum", widget: "string", hint: "Bijv. 10.04.2024" }
+      - { label: "Locatie", name: "locatie", widget: "string", default: "Schouwburg Concertzaal Tilburg" }
+      - label: "Themakleur"
+        name: "kleur"
+        widget: "select"
+        options:
+          - { label: "Lila", value: "#E5ABFF" }
+          - { label: "Elektrisch blauw", value: "#39AEFF" }
+          - { label: "Koraal", value: "#FF928F" }
+          - { label: "Smaragdgroen", value: "#18C674" }
+          - { label: "Zuurstokgeel", value: "#FDED79" }
+          - { label: "Zand", value: "#C7B299" }
+      - { label: "Thema (kort)", name: "thema", widget: "string", hint: "Bijv. Chemie, Circulariteit" }
+      - { label: "Ondertitel / kernvraag", name: "ondertitel", widget: "string", hint: "Bijv. Wat zit er écht in je kleren?" }
+      - { label: "Omschrijving", name: "omschrijving", widget: "markdown", hint: "Waar ging het over?" }
+      - { label: "Video-URL (terugkijken)", name: "video", widget: "string", required: false, hint: "YouTube- of Vimeo-link" }
+      - { label: "Coverbeeld", name: "cover", widget: "image", required: false }
+      - label: "Takeaways"
+        name: "takeaways"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Kop", name: "kop", widget: "string" }
+          - { label: "Uitleg", name: "uitleg", widget: "text" }
+      - label: "Sprekers"
+        name: "sprekers"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Naam", name: "naam", widget: "string" }
+          - { label: "Rol", name: "rol", widget: "string" }
+      - label: "Bronnen"
+        name: "bronnen"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Titel bron", name: "titel", widget: "string" }
+          - { label: "Link", name: "link", widget: "string", required: false }
+      - label: "Credits (team)"
+        name: "credits"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Rol", name: "rol", widget: "string", hint: "Bijv. Presentatie, Productie, Redactie, Decor" }
+          - { label: "Naam/namen", name: "naam", widget: "string" }
+
+  # ---------- EXPERTS ----------
+  - name: "experts"
+    label: "Experts"
+    label_singular: "Expert"
+    folder: "content/experts"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{naam}} — {{rol}}"
+    fields:
+      - { label: "Naam", name: "naam", widget: "string" }
+      - { label: "Rol / expertise", name: "rol", widget: "string" }
+      - { label: "Thema('s)", name: "themas", widget: "string", hint: "Bijv. Chemie, Productie (komma's ertussen)" }
+      - { label: "Portret", name: "portret", widget: "image", required: false }
+      - { label: "One-liner", name: "oneliner", widget: "string", required: false, hint: "Max ~12 woorden" }
+      - { label: "Bio", name: "bio", widget: "markdown", required: false }
+      - { label: "Citaat", name: "citaat", widget: "text", required: false, hint: "Een uitspraak van de persoon zelf" }
+      - { label: "Te gast bij (show)", name: "show", widget: "string", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+      - { label: "Contact toegestaan?", name: "contact_ok", widget: "boolean", default: false, hint: "Alleen aanvinken met toestemming van de expert" }
+
+  # ---------- NIEUWS / BLOG ----------
+  - name: "nieuws"
+    label: "Nieuws & blog"
+    label_singular: "Artikel"
+    folder: "content/nieuws"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{datum}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "datum", widget: "datetime", date_format: "DD-MM-YYYY", time_format: false }
+      - label: "Categorie"
+        name: "tag"
+        widget: "select"
+        options: ["Shows", "Tilburg Weeft Verder", "Achter de schermen", "Analyse"]
+      - { label: "Auteur", name: "auteur", widget: "string", required: false }
+      - { label: "Coverbeeld", name: "cover", widget: "image", required: false }
+      - { label: "Intro (vet)", name: "intro", widget: "text", required: false }
+      - { label: "Tekst", name: "body", widget: "markdown" }
+
+  # ---------- TEAM & AMBASSADEURS ----------
+  - name: "mensen"
+    label: "Team & ambassadeurs"
+    label_singular: "Persoon"
+    folder: "content/mensen"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{naam}} — {{rol}}"
+    fields:
+      - { label: "Naam", name: "naam", widget: "string" }
+      - { label: "Rol", name: "rol", widget: "string", hint: "Bijv. Oprichter, Productie, Ambassadeur" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Team", "Bestuur", "Ambassadeur", "Student/talent"]
+      - { label: "Portret", name: "portret", widget: "image", required: false }
+      - { label: "One-liner", name: "oneliner", widget: "string", required: false }
+      - { label: "Bio", name: "bio", widget: "markdown", required: false }
+      - { label: "Citaat", name: "citaat", widget: "text", required: false }
+      - label: "Themakleur (kaart)"
+        name: "kleur"
+        widget: "select"
+        options:
+          - { label: "Lila", value: "#E5ABFF" }
+          - { label: "Elektrisch blauw", value: "#39AEFF" }
+          - { label: "Koraal", value: "#FF928F" }
+          - { label: "Smaragdgroen", value: "#18C674" }
+          - { label: "Zuurstokgeel", value: "#FDED79" }
+
+  # ---------- AGENDA ----------
+  - name: "agenda"
+    label: "Agenda"
+    label_singular: "Agenda-item"
+    folder: "content/agenda"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{datum}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "datum", widget: "datetime", date_format: "DD-MM-YYYY" }
+      - { label: "Locatie", name: "locatie", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["Live show", "Meetup", "Pop-up", "Community"] }
+      - { label: "Omschrijving", name: "omschrijving", widget: "text", required: false }
+      - { label: "Ticketshop-URL (Weeztix)", name: "ticketshop", widget: "string", required: false, hint: "Plak de link naar je Weeztix-ticketshop (bijv. https://shop.weeztix.com/…). Wordt veilig ingebed op de eventpagina." }
+      - { label: "Externe ticket-/aanmeldlink", name: "link", widget: "string", required: false, hint: "Alternatief: een losse link (bijv. Schouwburg). Wordt een knop." }

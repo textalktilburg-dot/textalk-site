@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><rect x='6' y='30' width='88' height='40' rx='20' fill='none' stroke='black' stroke-width='6'/></svg>">
+<title>Experts — Textalk</title>
+<meta name="description" content="De experts die bij Textalk te gast waren over duurzame kleding. Vind kennis, vind mensen.">
+<meta property="og:site_name" content="Textalk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Experts — Textalk">
+<meta property="og:description" content="De experts die bij Textalk te gast waren over duurzame kleding. Vind kennis, vind mensen.">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="/media/og.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#000;--paper:#fff;--lila:#E5ABFF;--blauw:#39AEFF;--koraal:#FF928F;--groen:#18C674;--geel:#FDED79;--grey-text:#595959;
+    --font-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;--font-serif:"Instrument Serif",Georgia,serif;}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);color:var(--ink);background:var(--paper);font-size:1.0625rem;line-height:1.55}
+  .display{font-size:clamp(2.5rem,7vw,5.5rem);line-height:.92;letter-spacing:-.02em;font-weight:700}
+  .h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.1;font-weight:700}
+  .h3{font-size:clamp(1.125rem,2vw,1.375rem);line-height:1.2;font-weight:700}
+  .meta{font-size:.875rem;line-height:1.4}
+  .serif{font-family:var(--font-serif)}.serif-quote{font-family:var(--font-serif);font-style:italic}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:14px 28px;font-weight:600;font-size:1rem;transition:all .15s;cursor:pointer;border:1.5px solid var(--ink);line-height:1;text-decoration:none}
+  .btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:scale(1.03)}
+  .arr{display:inline-block;transition:transform .15s}.btn-primary:hover .arr{transform:translateX(4px)}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .logo-pill{display:inline-flex;align-items:baseline;border:2.5px solid currentColor;border-radius:999px;padding:.28em .7em;line-height:1;text-decoration:none}
+  .logo-tex{font-weight:800;letter-spacing:-.02em}.logo-talk{font-family:var(--font-serif);font-weight:400}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;border:1.5px solid var(--ink);padding:6px 14px;font-weight:500;font-size:.85rem;line-height:1;text-decoration:none;color:var(--ink)}
+  .tag:hover{background:var(--ink);color:#fff}
+  .hairline{border-top:1px solid var(--ink)}
+  .ph-people{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, rgba(0,0,0,.14) 0 22%, transparent 23%),linear-gradient(0deg,rgba(0,0,0,.08),rgba(0,0,0,.08))}
+  input[type=search]{border-radius:999px;border:1.5px solid var(--ink);padding:12px 22px;font-family:var(--font-sans);font-size:1rem;width:100%}
+  .filter{border-radius:999px;border:1.5px solid var(--ink);padding:8px 16px;font-weight:500;font-size:.85rem;cursor:pointer;background:transparent;transition:all .12s;white-space:nowrap}
+  .filter.active{background:var(--ink);color:#fff}
+  .ecard{position:relative;display:block;text-decoration:none;color:var(--ink)}
+  .ecard .media{transition:transform .4s}.ecard:hover .media{transform:scale(1.04)}
+  .demo-badge{position:fixed;bottom:16px;left:16px;z-index:60;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;opacity:.85}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s}.reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.ecard .media,.btn,.arr{transition:none}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+<script src="assets/cms-config.js"></script>
+<script src="assets/cms.js"></script>
+</head>
+<body>
+
+<header class="sticky top-0 z-50 bg-white" style="border-bottom:1px solid var(--ink)">
+  <div class="mx-auto flex items-center justify-between px-5 md:px-10" style="max-width:1280px;height:72px">
+    <a href="index.html" class="logo-pill text-xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></a>
+    <nav class="flex items-center gap-4 md:gap-6 overflow-x-auto">
+      <a class="font-medium hover:opacity-60" href="textalk-project-tilburg-weeft-verder.html">Tilburg Weeft Verder</a>
+      <a class="font-medium hover:opacity-60" href="textalk-talkshows-overzicht.html">Talkshows</a>
+      <a class="font-medium" style="border-bottom:2px solid var(--ink);padding-bottom:2px" href="#">Experts</a>
+      <a class="font-medium hover:opacity-60" href="nieuws.html">Nieuws</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/over">Over ons</a>
+      <a class="font-medium hover:opacity-60" href="index.html#/partners">Partners</a>
+      <a class="btn btn-primary" href="agenda.html">Kom langs</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="mx-auto px-5 py-14 md:px-10 md:py-20 reveal" style="max-width:1280px">
+  <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Vind kennis, vind mensen</p>
+  <h1 class="display mt-2">De experts</h1>
+  <p class="mt-6 max-w-2xl text-lg">Iedereen die bij Textalk aan tafel zat, van textielchemicus tot circulair ontwerper. Samen vormen ze een groeiende kennisbank over duurzame kleding — zoek op thema, of ontdek in welke show iemand sprak. Journalist, student of organisatie op zoek naar een expert? Hier vind je ze.</p>
+</section>
+
+<!-- ZOEK + FILTER -->
+<section class="hairline bg-white sticky top-[72px] z-40">
+  <div class="mx-auto px-5 py-4 md:px-10 flex flex-col gap-3 md:flex-row md:items-center" style="max-width:1280px">
+    <input type="search" id="q" placeholder="Zoek een expert of onderwerp…" class="md:max-w-xs">
+    <div class="flex gap-2 overflow-x-auto" id="filters">
+      <button class="filter active" data-f="alles">Alle thema's</button>
+      <button class="filter" data-f="Chemie">Chemie</button>
+      <button class="filter" data-f="Circulariteit">Circulariteit</button>
+      <button class="filter" data-f="Productie">Productie</button>
+      <button class="filter" data-f="Data & tech">Data & tech</button>
+      <button class="filter" data-f="Geschiedenis">Geschiedenis</button>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTGRID -->
+<section class="hairline bg-white">
+  <div class="mx-auto px-5 py-12 md:px-10" style="max-width:1280px">
+    <div id="grid" class="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4"></div>
+    <p id="empty" class="hidden py-16 text-center text-lg" style="color:var(--grey-text)">Geen expert gevonden. Probeer een ander woord.</p>
+  </div>
+</section>
+
+<!-- DETAIL VOORBEELD -->
+<section class="hairline" style="background:var(--geel)">
+  <div class="mx-auto px-5 py-6 md:px-10" style="max-width:1280px">
+    <p class="meta font-semibold uppercase tracking-wide">Voorbeeld van een expertprofiel ↓</p>
+  </div>
+</section>
+<section class="hairline bg-white">
+  <div class="mx-auto grid gap-10 px-5 py-16 md:grid-cols-12 md:px-10 md:py-20 reveal" style="max-width:1280px">
+    <div class="md:col-span-4">
+      <div class="relative aspect-[4/5] overflow-hidden" style="background:var(--geel);border:1px solid var(--ink)"><div class="ph-people"></div></div>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <a class="tag" href="#">Website ↗</a><a class="tag" href="#">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="md:col-span-8">
+      <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Textielchemicus</p>
+      <h2 class="display mt-2" style="font-size:clamp(2rem,4vw,3rem)">[Naam expert]</h2>
+      <p class="serif-quote mt-4 text-xl" style="color:var(--grey-text)">"Chemie is niet de vijand. Het is wat we ermee doen zonder na te denken."</p>
+      <div class="mt-6 space-y-4 text-lg">
+        <p>[Onderzoekt de rol van chemische stoffen in textielproductie en zoekt naar veiliger alternatieven. Werkt bij [instelling] en adviseert merken over hun chemiebeleid.]</p>
+        <p>[Bij Textalk schoof deze expert aan om uit te leggen wat er écht in onze kleren zit — en wie bepaalt wat toegestaan is.]</p>
+      </div>
+      <div class="mt-8">
+        <p class="meta font-semibold uppercase tracking-wide" style="color:var(--grey-text)">Te gast bij</p>
+        <div class="mt-3 flex flex-wrap gap-3">
+          <a href="textalk-show-detail.html" class="inline-flex items-center gap-3 pl-2 pr-4 py-2 rounded-full" style="border:1px solid var(--ink)">
+            <span class="w-6 h-6 rounded-full" style="background:var(--groen)"></span><span class="font-semibold">The Chemical Equation</span>
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 p-6 flex flex-wrap items-center justify-between gap-4" style="background:var(--ink);color:#fff">
+        <div><p class="h3">Deze expert spreken?</p><p class="meta text-white/70 mt-1">We brengen je graag in contact — voor pers, onderzoek of een evenement.</p></div>
+        <a class="btn" style="background:#fff;color:#000;border-color:#fff" href="mailto:hallo@textalk.nl">Neem contact op <span class="arr">→</span></a>
+      </div>
+      <p class="meta mt-4" style="color:var(--grey-text)">We delen contactgegevens alleen met toestemming van de expert.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA experts -->
+<section class="hairline" style="background:var(--lila)">
+  <div class="mx-auto px-5 py-16 md:px-10 md:py-20 reveal" style="max-width:1000px">
+    <h2 class="h2">Zelf expertise in duurzame kleding?</h2>
+    <p class="mt-4 text-lg max-w-2xl">We zijn altijd op zoek naar mensen die de kledingindustrie van binnenuit kennen — makers, wetenschappers, ondernemers. Denk je dat jouw verhaal op ons podium hoort? Laat het weten.</p>
+    <a class="btn btn-primary mt-8" href="mailto:hallo@textalk.nl">Stel jezelf voor <span class="arr">→</span></a>
+  </div>
+</section>
+</main>
+
+<footer style="background:var(--ink);color:var(--paper)">
+  <div class="mx-auto px-5 py-14 md:px-10" style="max-width:1280px">
+    <div class="flex flex-wrap items-baseline gap-4"><span class="logo-pill text-2xl"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span><span class="font-semibold">deep dive into fashion</span></div>
+    <div class="mt-12 flex flex-wrap items-center justify-between gap-4 pt-6" style="border-top:1px solid rgba(255,255,255,.2)">
+      <p class="serif-quote text-lg">Onze redactie bepaalt de inhoud — nooit onze financiers.</p>
+      <p class="meta">Stichting Textalk · Tilburg · hallo@textalk.nl</p>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-badge">Experts · placeholder</div>
+
+<script>
+const E=[
+  {n:'[Textielchemicus]',r:'Chemie in textiel',th:['Chemie'],c:'var(--geel)',show:'The Chemical Equation'},
+  {n:'[Circulair ontwerper]',r:'Circulaire mode',th:['Circulariteit'],c:'var(--groen)',show:'Designing for Circularity'},
+  {n:'[Milieuwetenschapper]',r:'Waterlozingen',th:['Chemie','Productie'],c:'var(--koraal)',show:'The Chemical Equation'},
+  {n:'[Datawetenschapper]',r:'Algoritmes & mode',th:['Data & tech'],c:'var(--lila)',show:'Patterns of Influence'},
+  {n:'[Textielhistoricus]',r:'Geschiedenis Tilburg',th:['Geschiedenis'],c:'var(--blauw)',show:'Threads of the Past'},
+  {n:'[Ondernemer]',r:'Tweedehands & resale',th:['Circulariteit'],c:'var(--geel)',show:'De Afvalberg'},
+  {n:'[Modewetenschapper]',r:'Consumptiegedrag',th:['Data & tech'],c:'var(--koraal)',show:'Antidotes for Overconsumption'},
+  {n:'[Producent]',r:'Productieketen',th:['Productie'],c:'var(--blauw)',show:'De Fast Fashion Paradox'},
+];
+function card(e){
+  return `<a class="ecard" href="#" data-th="${e.th.join(',')}" data-n="${e.n.toLowerCase()} ${e.r.toLowerCase()}">
+    <div class="media relative aspect-[4/5] overflow-hidden" style="background:${e.c};border:1px solid var(--ink)"><div class="ph-people"></div>
+      <span class="absolute top-2 left-2 logo-pill text-[10px]" style="border-width:1.5px;background:rgba(255,255,255,.85)"><span class="logo-tex">tex</span><span class="logo-talk">talk</span></span>
+    </div>
+    <p class="font-semibold mt-3 leading-tight">${e.n}</p>
+    <p class="meta" style="color:var(--grey-text)">${e.r}</p>
+    <p class="meta mt-1 font-semibold">${e.show} →</p>
+  </a>`;
+}
+const grid=document.getElementById('grid'),empty=document.getElementById('empty');
+let curF='alles',curQ='';
+function render(){
+  const items=E.filter(e=>(curF==='alles'||e.th.includes(curF))&&((e.n+' '+e.r).toLowerCase().includes(curQ)));
+  grid.innerHTML=items.map(card).join('');empty.classList.toggle('hidden',items.length>0);
+  grid.querySelectorAll('.ecard').forEach(el=>io.observe(el));
+}
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');curF=b.dataset.f;render();}));
+document.getElementById('q').addEventListener('input',e=>{curQ=e.target.value.toLowerCase();render();});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+render();
+TextalkCMS.fill("grid","experts",TextalkCMS.expertTile);
+</script>
+</body>
+</html>
