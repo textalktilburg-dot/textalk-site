@@ -1,5 +1,5 @@
 ---
-title: Textalk - Designing For Circularity
+title: Designing For Circularity
 datum: Januari 2023
 locatie: Studiozaal - Schouwburg Concertzaal Tilburg
 kleur: "#18C674"
