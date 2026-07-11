@@ -3,7 +3,7 @@
 // Voorbeeld: als je repository github.com/textalktilburg/textalk-site heet:
 //   user: "textalktilburg", repo: "textalk-site"
 window.TEXTALK_CMS = {
-  user: "",   // <-- jouw GitHub-gebruikersnaam tussen de aanhalingstekens
-  repo: "",   // <-- de naam van je repository (meestal: textalk-site)
+  user: "textalktilburg_CMS",   // <-- jouw GitHub-gebruikersnaam tussen de aanhalingstekens
+  repo: "textalk-site",   // <-- de naam van je repository (meestal: textalk-site)
   branch: "main"
 };
